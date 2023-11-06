@@ -99,6 +99,8 @@ class CoverageReportBuilder(object):
             div += cg.weight
             self.report.covergroups.append(cg)
             self.report.covergroup_m[cg.instname] = cg
+        else:
+            div=1
         self.report.coverage = coverage/div
             
     def build_covergroup(self, cg_n)->CoverageReport.Covergroup:
