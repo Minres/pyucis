@@ -152,11 +152,11 @@ class XmlReader():
                 1,
                 UCIS_OTHER)
             ciX_options = ciX.find("options")
-            if ciX_options.find("per_instance"):
+            if 'per_instance' in ciX_options.attrib:
                 ci.m_per_instance = self.getAttrBool(ciX_options, 'per_instance')
             else:
                 ci.m_per_instance = False
-            if ciX_options.find("merge_instances"):
+            if 'merge_instances' in ciX_options.attrib:
                 ci.m_merge_instances = self.getAttrBool(ciX_options, 'merge_instances')
             else:
                 ci.m_merge_instances = False
